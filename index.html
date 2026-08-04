@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <title>Star e-Office - Star Digital Office</title>
+    <meta name="description" content="Star e-Office adalah platform digital office modern untuk kolaborasi, HR, dan operasional perusahaan dalam satu workspace." />
+    <meta name="author" content="Star e-Office" />
+    <link rel="icon" href="https://hercules-cdn.com/file_gLpFDAkGr1mGI9D71iQ8Is5y" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="https://hercules-cdn.com/file_TYr2Df58nZYpID6x8p76IO6J"
+    />
+
+    <meta property="og:title" content="Star e-Office - Star Digital Office" />
+    <meta
+      property="og:description"
+      content="Star e-Office adalah platform digital office modern untuk kolaborasi, HR, dan operasional perusahaan dalam satu workspace."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://hercules-cdn.com/cdn-cgi/image/w=1200,h=630,q=85,fit=cover,format=auto/file_TYr2Df58nZYpID6x8p76IO6J" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://hercules.app/og/app/%VITE_HERCULES_WEBSITE_ID%.png"
+    />
+    <meta name="twitter:site" content="@UseHercules" />
+
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Star e-Office" />
+    <link rel="apple-touch-icon" href="https://hercules-cdn.com/cdn-cgi/image/w=192,h=192,fit=cover,format=png/file_TYr2Df58nZYpID6x8p76IO6J" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+      crossorigin
+    />
+
+    <!-- Detect dark mode preference and set the class before next-themes loads. This avoids a flash of unstyled content (FOUC) when the page loads. -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("theme");
+          if (theme === "system" || !theme) {
+            var prefersDark = window.matchMedia(
+              "(prefers-color-scheme: dark)",
+            ).matches;
+            theme = prefersDark ? "dark" : "light";
+          }
+          document.documentElement.classList.add(theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <link href="/src/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
